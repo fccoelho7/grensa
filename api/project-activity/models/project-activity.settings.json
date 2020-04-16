@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "project_activities",
+  "info": {
+    "name": "Project Activity"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Event": {
+      "type": "string"
+    },
+    "project": {
+      "via": "project_activities",
+      "columnName": "Actvities",
+      "model": "project"
+    }
+  }
+}

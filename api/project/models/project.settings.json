@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "projects",
+  "info": {
+    "name": "Project"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "client": {
+      "model": "client",
+      "via": "projects"
+    },
+    "company": {
+      "model": "company",
+      "via": "projects"
+    },
+    "project_activities": {
+      "collection": "project-activity",
+      "via": "project"
+    }
+  }
+}

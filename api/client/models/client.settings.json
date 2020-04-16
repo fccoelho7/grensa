@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "connection": "default",
+  "collectionName": "clients",
+  "info": {
+    "name": "Client"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "Name": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "company": {
+      "via": "clients",
+      "model": "company"
+    },
+    "projects": {
+      "via": "client",
+      "collection": "project"
+    }
+  }
+}
