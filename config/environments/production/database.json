@@ -4,10 +4,11 @@
     "default": {
       "connector": "mongoose",
       "settings": {
-        "uri": "${process.env.DATABASE_URI || 'mongodb://heroku_99snss0b:fpbhbn2obrembd4v6nd75frfqr@ds033076.mlab.com:33076/heroku_99snss0b'}"
+        "uri": "${process.env.DATABASE_URI}"
       },
       "options": {
-        "ssl": true
+        "authenticationDatabase": "${process.env.DATABASE_NAME}",
+        "ssl": false
       }
     }
   }
